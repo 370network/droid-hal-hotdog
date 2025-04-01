@@ -9,7 +9,12 @@
 
 %define installable_zip 1
 
+%define droid_target_aarch64 1
+
 %include rpm/dhd/droid-hal-device.inc
+
+# On Android 8+ the system partition is (intended to be) mounted on /.
+%define makefstab_skip_entries / /product /system /system_ext /vendor
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
 # sign, otherwise they will remain defined! E.g.:
