@@ -12,6 +12,8 @@
 %define droid_target_aarch64 1
 
 %define makefstab_skip_entries / /product /system /system_ext /vendor
+Requires: droid-system
+
 %include rpm/dhd/droid-hal-device.inc
 
 # On Android 8+ the system partition is (intended to be) mounted on /.
