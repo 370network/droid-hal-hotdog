@@ -13,6 +13,14 @@
 
 %define makefstab_skip_entries / /product /system /system_ext /vendor
 
+%define straggler_files \
+	/bugreports \
+	/cache \
+	/d \
+	/product_services \
+	/sdcard \
+%{nil}
+
 %include rpm/dhd/droid-hal-device.inc
 
 # On Android 8+ the system partition is (intended to be) mounted on /.
